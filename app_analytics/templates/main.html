@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>AlterBooth</title>
-    </head>
-    <body>
-        <h1>
-            Hello World
-        </h1>
-        <p>
-            {{ answer.plus }}
-        </p>
-        <p>
-            {{ answer.minus }}
-        </p>
-        <p>
-            {{ minus8 }}
-        </p>
-    </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AlterBooth</title>
+</head>
+
+<body>
+  <h1>Hello World</h1>
+  {% if answers == [] %}
+  <p>数字がありません</p>
+  {% else %}
+  {% for answer in answers %}
+  <p>{{ answer.plus }}</p>
+  <p>{{ answer.minus }}</p>
+  {% endfor %}
+  <p>{{ minus8 }}</p>
+  {% endif %}
+</body>
+
 </html>
