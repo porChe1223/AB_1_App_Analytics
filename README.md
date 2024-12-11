@@ -3,5 +3,5 @@
 - python3 -m venv venv
 - source venv/bin/activate
 - pip install -r requirements.txt
-- export FLASK_APP=main
+- set FLASK_APP=app_analytics
 - flask run
